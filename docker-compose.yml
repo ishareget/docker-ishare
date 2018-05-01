@@ -1,0 +1,57 @@
+version: '2.1'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=ishare@888
+    volumes:
+      - ./.docker/mariadb/data:/var/lib/mysql
+      - ./.docker/mariadb/ishare.sql:/docker-entrypoint-initdb.d/ishare.sql
+    ports:
+      - 3306:3306
+
+  server:
+    image: node:8-alpine
+    environment:
+      - PORT=3000
+      - DB_HOST=mariadb
+      - DB_PORT=3306
+      - DB_DATABASE=ishare
+      - DB_USERNAME=root
+      - DB_PASSWORD=ishare@888
+      - JWT_SECRET=ishare
+    volumes:
+      - ./server_plus:/usr/src/app
+      - ./.docker/server/assets:/usr/src/app/src/public/assets
+    command: sh -c "cd /usr/src/app && yarn install && yarn start"
+    links:
+      - mariadb
+
+  activity:
+    build:
+      context: ./activity_v2
+
+  dashboard:
+    build:
+      context: ./dashboard_v2
+  
+  meal:
+    build:
+      context: ./exchange_v2
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./.docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - server
+      - activity
+      - dashboard
+      - meal
+    ports:
+      - 80:80
+
+
+
+   

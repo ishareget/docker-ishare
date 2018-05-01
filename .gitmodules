@@ -1,0 +1,12 @@
+[submodule "server_plus"]
+	path = server_plus
+	url = https://gitlab.com/angel-plan/server_plus.git
+[submodule "activity_v2"]
+	path = activity_v2
+	url = https://gitlab.com/angel-plan/activity_v2.git
+[submodule "dashboard_v2"]
+	path = dashboard_v2
+	url = https://gitlab.com/angel-plan/dashboard_v2.git
+[submodule "exchange_v2"]
+	path = exchange_v2
+	url = https://gitlab.com/angel-plan/exchange_v2.git
