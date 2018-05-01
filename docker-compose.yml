@@ -22,7 +22,7 @@ services:
       - DB_PASSWORD=ishare@888
       - JWT_SECRET=ishare
     volumes:
-      - ./server_plus:/usr/src/app
+      - ./server:/usr/src/app
       - ./.docker/server/assets:/usr/src/app/src/public/assets
     command: sh -c "cd /usr/src/app && yarn install && yarn start"
     links:
@@ -30,15 +30,15 @@ services:
 
   activity:
     build:
-      context: ./activity_v2
+      context: ./activity
 
   dashboard:
     build:
-      context: ./dashboard_v2
+      context: ./dashboard
   
   meal:
     build:
-      context: ./exchange_v2
+      context: ./exchange
 
   nginx:
     image: nginx:latest
