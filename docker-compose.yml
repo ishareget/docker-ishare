@@ -39,6 +39,10 @@ services:
   meal:
     build:
       context: ./exchange
+  
+  check:
+    build:
+      context: ./browsercheck
 
   nginx:
     image: nginx:latest
@@ -49,6 +53,7 @@ services:
       - activity
       - dashboard
       - meal
+      - check
     ports:
       - 80:80
 
