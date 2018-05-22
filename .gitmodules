@@ -10,6 +10,4 @@
 [submodule "exchange"]
 	path = exchange
 	url = https://github.com/ishareget/exchange.git
-[submodule "browsercheck"]
-	path = browsercheck
-	url = https://github.com/ishareget/browsercheck.git
+
