@@ -35,3 +35,15 @@ or rebuild and run
 ```
 docker-compose up -d --build
 ```
+
+## Danger
+
+Force to rebuild
+
+```sh
+ docker-compose rm --all &&
+ docker-compose pull &&
+ docker-compose build --no-cache &&
+ docker-compose up -d --force-recreate
+```
+
