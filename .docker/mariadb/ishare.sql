@@ -99,7 +99,7 @@ CREATE TABLE `web_carousel` (
 
 LOCK TABLES `web_carousel` WRITE;
 /*!40000 ALTER TABLE `web_carousel` DISABLE KEYS */;
-INSERT INTO `web_carousel` VALUES (15,3,'天地人學堂：會計師教您認識及閱讀財務報表','/assets/dashboard/f398f4d41c81f7061d1c384b9335f0fe.jpg','http://www.ishareget.org/#/mission/introduce?id=42'),(17,1,'【阿薩布魯聊書會】台北社群讀書會','/assets/dashboard/2c204975d7c16b2b211b01550cdf1d96.jpg','http://www.ishareget.org/#/mission/introduce?id=46');
+INSERT INTO `web_carousel` VALUES (15,3,'天地人學堂：會計師教您認識及閱讀財務報表','/assets/dashboard/f398f4d41c81f7061d1c384b9335f0fe.jpg','http://ishare.robby570.tw/#/mission/introduce?id=42'),(17,1,'【阿薩布魯聊書會】台北社群讀書會','/assets/dashboard/2c204975d7c16b2b211b01550cdf1d96.jpg','http://ishare.robby570.tw/#/mission/introduce?id=46');
 /*!40000 ALTER TABLE `web_carousel` ENABLE KEYS */;
 UNLOCK TABLES;
 
