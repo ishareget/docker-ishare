@@ -2,6 +2,11 @@
 
 Run iShare project in Docker.
 
+## Setup
+
+1. Clone this project
+2. chmod 777 for .docker/mariadb/data
+
 ## Usage
 
 1. Download dependence project using `git submodule` command.
